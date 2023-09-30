@@ -64,7 +64,8 @@ def calc_smth_twice_with_process():
 def calc_smth_twice_with_process_refactor():
     p_list = [Process(target=calc_smth) for _ in range(2)]
     [p.start() for p in p_list]
-    [p.join() for p in p_list]  # без этого основной поток слишком быстро завершит работу, но это не помешает дочерним
+    # без этого основной поток слишком быстро завершит работу, но это не помешает дочерним
+    [p.join() for p in p_list]
 
 
 @timeit

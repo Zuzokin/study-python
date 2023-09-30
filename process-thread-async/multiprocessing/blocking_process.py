@@ -31,8 +31,7 @@ def file_writer_with_Rlocker(start: int, finish: int, locker: Lock):
             print(i)
             f_o.write(f"{i}\n")
     # для безопасности процессов, чтобы другой процесс не снял блокировку - Rlock
-    p = Process(target=releaser,
-                args=(locker,))
+    p = Process(target=releaser, args=(locker,))
     p.start()
 
 
