@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "learn-pytest"
+version = "0.1.0"
+description = ""
+authors = ["Михаил Скорняков <misha-skor2012@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+responses = "^0.23.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+icecream = "^2.1.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
